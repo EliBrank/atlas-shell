@@ -1,1 +1,18 @@
 #!/usr/bin/env bash
+# This script displays "Best School" 10 times, except on line 4 (displays "bad luck") and line 8 (displays "good luck")
+
+i=1
+
+while [ $i -le 10 ]
+do
+	if [ $i -eq 4 ]
+	then
+		echo "bad luck"
+	elif [ $i -eq 8 ]
+	then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+	i=$(( i+1 ))
+done
