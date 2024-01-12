@@ -1,1 +1,7 @@
 #!/usr/bin/env bash
+# displays current directory content, cutting off each entry before the first "-"
+
+for entry in $(ls)
+do
+	echo $entry | cut -d '-' -f2-
+done
