@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 # displays story about elements separated out from /etc/passwd file
 
-IFS=":"
-
 while read -r row
 do
+	IFS=":"
 	set "$row"
 	USERNAME=$1
 	PASSWORD=$2
