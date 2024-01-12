@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # displays the username, user id, and home directory path for the user from /etc/passwd
 
-while read -r row
+while read -r line
 do
-	echo $row | cut -d ":" -f 1,3,6
-done < "/etc/passwd"
+	echo "$line" | cut -d: -f1,3,6
+done < /etc/passwd
