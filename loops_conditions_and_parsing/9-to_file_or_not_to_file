@@ -1,21 +1,23 @@
 #!/usr/bin/env bash
 # runs series of tests on school file to determine if it exists, if it is empty, and if it is a regular file
 
+s="school"
+
 # tests if school exists
-if test -e "$school"
+if [ -e "$s" ]
 then
 	echo "school file exists"
 
 	# tests if school is empty
-	if test -s "$school"
+	if [ -s "$s" ]
 	then
-		echo "school file is empty"
-	else
 		echo "school file is not empty"
+	else
+		echo "school file is empty"
 	fi
 	
 	# tests if school is a regular file
-	if test -f "$school"
+	if [ -f "$s" ]
 	then
 		echo "school is a regular file"
 	fi
